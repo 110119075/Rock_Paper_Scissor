@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ScoreActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A237E">
+
+        <TextView
+            android:id="@+id/current_round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:text="round number"
+            android:textColor="#EDE7F6"
+            android:textSize="32sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/score_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/current_round"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center_horizontal"
+            android:text="default"
+            android:textColor="#EDE7F6"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/total_score_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_message"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:text="TOTAL SCORE"
+            android:textColor="#EDE7F6"
+            android:textSize="40dp"
+            android:textStyle="bold"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/score_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_score_text_view"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_player1_name_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="center"
+                    android:text="player1"
+                    android:textColor="#EDE7F6"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/current_score_player1_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#EDE7F6"
+                    android:textSize="80dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_player2_name_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="center"
+                    android:text="player2"
+                    android:textColor="#EDE7F6"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/current_score_player2_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#EDE7F6"
+                    android:textSize="80dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/game_over"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_layout"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:text="GAME OVER"
+            android:textColor="#FFFF00"
+            android:textSize="48dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/final_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/game_over"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center_horizontal"
+            android:text="default"
+            android:textColor="#EDE7F6"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/next_round_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/final_message"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="24dp"
+            android:background="#EDE7F6"
+            android:text="NEXT ROUND"
+            android:textColor="#000000" />
+
+    </RelativeLayout>
+</ScrollView>
